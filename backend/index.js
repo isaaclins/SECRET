@@ -1,13 +1,14 @@
 const { app, BrowserWindow } = require('electron');
+const path = require('path');
 
 function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 800,
-    devTools: false,
-    movable: true,
+
   });
 
+  // Load HTML file
   win.loadFile('./../frontend/main.html');
 }
 
