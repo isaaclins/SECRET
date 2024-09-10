@@ -4,9 +4,11 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 800,
+    devTools: false,
+    movable: true,
   });
 
-  win.loadURL('https://isaaclins.com'); // You can load any URL or local file here
+  win.loadFile('./../frontend/main.html');
 }
 
 app.whenReady().then(() => {
