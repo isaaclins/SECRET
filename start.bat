@@ -1,2 +1,2 @@
 @echo off
-npm start
+npm install && npm start
