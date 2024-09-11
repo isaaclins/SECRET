@@ -7,8 +7,8 @@ function createWindow() {
     height: 800,
   });
 
-  // Load HTML file
-  win.loadFile('./../frontend/main.html');
+  // Load React app
+  win.loadURL('http://localhost:3000');
 }
 
 app.whenReady().then(() => {
