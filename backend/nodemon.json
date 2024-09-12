@@ -1,6 +1,0 @@
-{
-    "watch": ["index.js"],
-    "exec": "electron .",
-    "ext": "js,json,html,css"
-  }
-  
