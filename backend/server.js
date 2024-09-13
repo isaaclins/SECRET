@@ -1,23 +1,20 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from 'url';
+import cors from 'cors';
+
 
 const app = express();
 const port = 8000;
-
-// __dirname is not available in ES modules, so you need to derive it.
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+app.use(cors());
 
 app.use(express.json());
 
-app.post("/submit", (req, res) => {
+app.post("/api/submit", (req, res) => {
   const { password } = req.body;
-  console.log(toString(password))
+  console.log(password);
   if (password === "helloworld") {
-    res.status(201).sendFile(path.join(__dirname, 'hello.html'));
+    res.sendStatus(200); // OK
   } else {
-    res.status(401).sendFile(path.join(__dirname, 'unauthorized.html'));
+    res.sendStatus(401); // UNAUTHORIZED
   }
 });
 
