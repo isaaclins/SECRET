@@ -23,18 +23,18 @@ jobs:
       - name: Detect package manager for frontend
         id: detect-package-manager-frontend
         run: |
-          if [ -f "./frontend/yarn.lock" ]; then
+          cd ./frontend
+          if [ -f "yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
-          elif [ -f "./frontend/package.json" ]; then
+          elif [ -f "package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
           else
             echo "Unable to determine package manager for frontend"
             exit 1
-        working-directory: ./frontend
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -52,7 +52,6 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-        working-directory: ./frontend
       - name: Install dependencies
         run: ${{ steps.detect-package-manager-frontend.outputs.manager }} ${{ steps.detect-package-manager-frontend.outputs.command }}
         working-directory: ./frontend
@@ -72,18 +71,18 @@ jobs:
       - name: Detect package manager for backend
         id: detect-package-manager-backend
         run: |
-          if [ -f "./backend/yarn.lock" ]; then
+          cd ./backend
+          if [ -f "yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
-          elif [ -f "./backend/package.json" ]; then
+          elif [ -f "package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
           else
             echo "Unable to determine package manager for backend"
             exit 1
-        working-directory: ./backend
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -101,7 +100,6 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-        working-directory: ./backend
       - name: Install dependencies
         run: ${{ steps.detect-package-manager-backend.outputs.manager }} ${{ steps.detect-package-manager-backend.outputs.command }}
         working-directory: ./backend
