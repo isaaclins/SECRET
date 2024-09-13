@@ -2,7 +2,7 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["deploy"]
   workflow_dispatch:
 
 permissions:
@@ -34,7 +34,7 @@ jobs:
           else
             echo "Unable to determine package manager for frontend"
             exit 1
-          fi
+        working-directory: ./frontend
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -52,6 +52,7 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+        working-directory: ./frontend
       - name: Install dependencies
         run: ${{ steps.detect-package-manager-frontend.outputs.manager }} ${{ steps.detect-package-manager-frontend.outputs.command }}
         working-directory: ./frontend
@@ -82,7 +83,7 @@ jobs:
           else
             echo "Unable to determine package manager for backend"
             exit 1
-          fi
+        working-directory: ./backend
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -100,6 +101,7 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+        working-directory: ./backend
       - name: Install dependencies
         run: ${{ steps.detect-package-manager-backend.outputs.manager }} ${{ steps.detect-package-manager-backend.outputs.command }}
         working-directory: ./backend
