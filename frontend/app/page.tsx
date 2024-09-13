@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault(); // Prevent the default form submission
 
     const response = await fetch("http://localhost:8000/api/submit", {
