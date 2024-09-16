@@ -24,6 +24,7 @@ body {
   background: var(--background);
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden; /* Add this line */
+  max-width: 100%;
 }
 
 @layer utilities {
