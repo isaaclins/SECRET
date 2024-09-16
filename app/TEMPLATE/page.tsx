@@ -86,7 +86,7 @@ export default function Templatesite() {
             <div className="mt-4">
               <h2 className="text-2xl font-bold">Image Example</h2>
               <img
-                src="/favicon.png"
+                src="../favicon.png"
                 alt="Description of the image"
                 className="mt-2 rounded-md shadow-md"
               />
