@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
@@ -8,6 +7,7 @@ import 'animate.css';
 
 export default function Home() {
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
   const router = useRouter();
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
@@ -16,9 +16,11 @@ export default function Home() {
     const encodedPassword = btoa(password); // Encode the password in base64
 
     if (encodedPassword === "VGhlIE15dGggb2YgU2lzeXBodXM=") {
-      router.push("/chapter0");
+      router.push("/navigation");
     } else {
+      setError(true);
       console.log("Password is incorrect!");
+      setTimeout(() => setError(false), 1000); // Remove the error class after 1 second
     }
   };
 
@@ -32,6 +34,7 @@ export default function Home() {
             onChange={(e) => setPassword(e.target.value)}
             name="password"
             placeholder="Enter your password"
+            className={error ? "animate__animated animate__headShake" : ""}
           />
           <Button variant="outline" type="submit">
             SUBMIT
