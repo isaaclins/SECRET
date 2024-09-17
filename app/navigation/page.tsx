@@ -9,7 +9,7 @@ import {
   BreadcrumbList,
 } from "@/components/ui/breadcrumb";
 
-export default function navigationsite() {
+export default function Navigationsite() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
