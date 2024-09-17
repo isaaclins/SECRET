@@ -3,14 +3,14 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import 'animate.css';
+import "animate.css";
 
 export default function Home() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const router = useRouter();
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault(); // Prevent the default form submission
 
     const encodedPassword = btoa(password); // Encode the password in base64

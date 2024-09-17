@@ -10,7 +10,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Textarea } from "@/components/ui/textarea"
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Feedback() {
   const [feedback, setFeedback] = useState("");
@@ -66,32 +66,34 @@ export default function Feedback() {
           </BreadcrumbList>
         </Breadcrumb>
       </header>
-        <h1 className="flex text-4xl justify-center items-center">Thank you for your Feedback!</h1>
-        <div className="flex justify-center items-center mt-10">
-          <div className="mt-4 ">
-            <form
-              onSubmit={handleSubmit}
-              className="mt-2 p-4 border rounded-md shadow-md flex flex-col items-center"
-            >
-              <Input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Name (optional)"
-                className="mb-4"
-              />
-              <Textarea 
-                value={feedback}
-                onChange={(e) => setFeedback(e.target.value)}
-                placeholder="feedback"
-                className="mb-4"
-              />
-              <Button variant="outline" type="submit">
-                SUBMIT
-              </Button>
-            </form>
-          </div>
+      <h1 className="flex text-4xl justify-center items-center">
+        Thank you for your Feedback!
+      </h1>
+      <div className="flex justify-center items-center mt-10">
+        <div className="mt-4 ">
+          <form
+            onSubmit={handleSubmit}
+            className="mt-2 p-4 border rounded-md shadow-md flex flex-col items-center"
+          >
+            <Input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Name (optional)"
+              className="mb-4"
+            />
+            <Textarea
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
+              placeholder="feedback"
+              className="mb-4"
+            />
+            <Button variant="outline" type="submit">
+              SUBMIT
+            </Button>
+          </form>
         </div>
+      </div>
     </div>
   );
 }
