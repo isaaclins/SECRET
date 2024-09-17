@@ -37,9 +37,9 @@ export default function Templatesite() {
             <BreadcrumbItem>
               <BreadcrumbLink
                 className="font-thin text-white"
-                href="/SECRET/navigation"
+                href="/SECRET/NAVIGATION"
               >
-                My Story
+                NAVIGATION
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>

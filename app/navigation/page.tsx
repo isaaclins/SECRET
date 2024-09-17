@@ -36,19 +36,8 @@ export default function navigationsite() {
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink
-                className="font-thin text-white"
-                href="/navigation"
-              >
-                My Story
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator>
-              <Slash />
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink
                 className="font-bold text-white"
-                href="/navigation"
+                href="/SECRET/NAVIGATION"
               >
                 Navigation
               </BreadcrumbLink>
@@ -59,7 +48,7 @@ export default function navigationsite() {
       <div className="body">
         <div className="mt-4">
           <h1 className="text-4xl flex justify-center items-start">
-            Sisyphus is my hero.
+            Navigation
           </h1>
           <div className="mt-2 p-4 border rounded-md shadow-md">
             <p className="text-lg text-center"></p>
