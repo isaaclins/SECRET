@@ -84,8 +84,13 @@ export default function navigationsite() {
       </div>
       <footer className="footer border p-5 backdrop-blur-sm flex justify-center bottom-10 left-20 right-20 z-10">
         <div className="flex space-x-16">
-          <Button variant="outline">
-            Next page
+          <Button variant="outline" size="icon">
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+          <a href="/feedback">
+            <Button variant="outline">Leave Feedback</Button>
+          </a>
+          <Button variant="outline" size="icon">
             <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
