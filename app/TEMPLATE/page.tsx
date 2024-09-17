@@ -1,14 +1,7 @@
-"use client";
+"use client";;
 import { useEffect, useState } from "react";
-import { Slash, ChevronRight, ChevronLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import CustomFooter from "@/components/custom/customFooter";
+import CustomBreadCrumb from "@/components/custom/header/customBreadCrumb";
 
 export default function Templatesite() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -26,36 +19,13 @@ export default function Templatesite() {
   }, []);
 
   return (
+    <div className="border sticky p-5 m-1">
     <div className="container mx-auto">
       <div
         className="fixed top-0 right-0 w-2 bg-white"
         style={{ height: `${scrollProgress}%` }}
       ></div>
-      <header className="header sticky top-10 mt-2 z-10 m-10 border p-5 backdrop-blur-md">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink
-                className="font-thin text-white"
-                href="/SECRET/NAVIGATION"
-              >
-                NAVIGATION
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator>
-              <Slash />
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink
-                className="font-bold text-white"
-                href="/SECRET/TEMPLATE"
-              >
-                TEMPLATE
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </header>
+        <CustomBreadCrumb main={true} parents={['SECRET', 'NAVIGATION']} child="TEMPLATE" />
       <div className="body">
         <div className="mt-4">
           <h1 className="text-4xl flex justify-center items-start">TEMPLATE</h1>
@@ -317,19 +287,8 @@ export default function Templatesite() {
           </div>
         </div>
       </div>
-      <footer className="footer border p-5 backdrop-blur-sm flex justify-center bottom-10 left-20 right-20 z-10">
-        <div className="flex space-x-16">
-          <Button variant="outline" size="icon">
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-          <a href="/SECRET/feedback">
-            <Button variant="outline">Leave Feedback</Button>
-          </a>
-          <Button variant="outline" size="icon">
-            <ChevronRight className="h-4 w-4" />
-          </Button>
-        </div>
-      </footer>
+    <CustomFooter></CustomFooter>
+    </div>
     </div>
   );
 }
