@@ -25,7 +25,9 @@ export default function Templatesite() {
         className="fixed top-0 right-0 w-2 bg-white"
         style={{ height: `${scrollProgress}%` }}
       ></div>
+            <header className="header sticky top-10 mt-2 z-10 m-10 border p-5 backdrop-blur-md">
         <CustomBreadCrumb main={true} parents={['SECRET', 'NAVIGATION']} child="TEMPLATE" />
+        </header>
       <div className="body">
         <div className="mt-4">
           <h1 className="text-4xl flex justify-center items-start">TEMPLATE</h1>
