@@ -46,7 +46,10 @@ export default function Templatesite() {
               <Slash />
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbLink className="font-bold text-white" href="/SECRET/TEMPLATE">
+              <BreadcrumbLink
+                className="font-bold text-white"
+                href="/SECRET/TEMPLATE"
+              >
                 TEMPLATE
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -60,11 +63,11 @@ export default function Templatesite() {
             <p className="text-lg text-center"></p>
             <h2 className="text-2xl font-bold">HTML Features</h2>
             <p>
-              This is an example of <strong>strong text</strong> and{" "}
-              <em>italic text</em>. You can also create{" "}
+              This is an example of <strong>strong text</strong> and
+              <em>italic text</em>. You can also create
               <a href="#" className="text-blue-500">
                 links
-              </a>{" "}
+              </a>
               to other pages.
             </p>
             <ul className="list-disc list-inside">
@@ -135,10 +138,10 @@ export default function Templatesite() {
             </p>
             <h2 className="text-2xl font-bold">CSS Features</h2>
             <p>
-              You can also use{" "}
+              You can also use
               <span className="text-blue-500 hover:underline">
                 inline styles
-              </span>{" "}
+              </span>
               to customize the appearance of text.
             </p>
             <p className="text-red-500">This text is red.</p>
