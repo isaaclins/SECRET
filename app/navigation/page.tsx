@@ -55,11 +55,11 @@ export default function navigationsite() {
             <h2 className="text-2xl font-bold">What is this about?</h2>
             <hr className="my-4" />
             <p>
-              This is not just a story about physical recovery; it's a journey
-              through the darkest corners of the human psyche, a battle against
-              the demons of despair and loneliness. It's about finding light in
-              the darkest of places, and finding strength in the most unlikely
-              of places.
+              This is not just a story about physical recovery; it&apos;s a
+              journey through the darkest corners of the human psyche, a battle
+              against the demons of despair and loneliness. It&apos;s about
+              finding light in the darkest of places, and finding strength in
+              the most unlikely of places.
             </p>
             <hr className="my-4" />
             <ol>
