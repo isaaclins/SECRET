@@ -1,7 +1,7 @@
 "use client";;
 import { useEffect, useState } from "react";
 import CustomFooter from "@/components/custom/customFooter";
-import CustomBreadCrumb from "@/components/custom/header/customBreadCrumb";
+import CustomBreadCrumb from "@/components/custom/customBreadCrumb";
 
 export default function Templatesite() {
   const [scrollProgress, setScrollProgress] = useState(0);
