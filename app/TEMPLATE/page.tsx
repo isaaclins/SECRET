@@ -37,7 +37,7 @@ export default function Templatesite() {
             <BreadcrumbItem>
               <BreadcrumbLink
                 className="font-thin text-white"
-                href="/navigation"
+                href="/SECRET/navigation"
               >
                 My Story
               </BreadcrumbLink>
@@ -46,7 +46,7 @@ export default function Templatesite() {
               <Slash />
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbLink className="font-bold text-white" href="/TEMPLATE">
+              <BreadcrumbLink className="font-bold text-white" href="/SECRET/TEMPLATE">
                 TEMPLATE
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -319,7 +319,7 @@ export default function Templatesite() {
           <Button variant="outline" size="icon">
             <ChevronLeft className="h-4 w-4" />
           </Button>
-          <a href="/feedback">
+          <a href="/SECRET/feedback">
             <Button variant="outline">Leave Feedback</Button>
           </a>
           <Button variant="outline" size="icon">
