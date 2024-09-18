@@ -23,10 +23,7 @@ export default function Templatesite() {
               <h2 className="text-2xl font-bold">HTML Features</h2>
               <p>
                 This is an example of <strong>strong text</strong> and
-                <em>italic text</em>. You can also create
-                <a href="#" className="text-blue-500">
-                  links
-                </a>
+                <em>italic text</em>.
                 to other pages.
               </p>
               <div className="REMOVEME">
