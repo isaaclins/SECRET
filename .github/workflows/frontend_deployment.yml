@@ -20,7 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -33,27 +32,21 @@ jobs:
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=npx" >> $GITHUB_OUTPUT
           fi
-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-
+      - name: List directory contents
+        run: ls -la
       - name: Start application
         run: npm run start &
-        env:
-          CI: true
-
       - name: Wait for application to be ready
         run: |
           npx wait-on http://localhost:3000 --timeout 60000
-
       - name: Run Cypress tests
         run: npx cypress run
         env:
           CYPRESS_baseUrl: http://localhost:3000
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
