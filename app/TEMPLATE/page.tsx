@@ -289,7 +289,7 @@ export default function Templatesite() {
           </div>
         </div>
       </div>
-    <CustomFooter></CustomFooter>
+    <CustomFooter Lastpage="/example1" Nextpage="/example3" Feedback={true} />
     </div>
     </div>
   );
