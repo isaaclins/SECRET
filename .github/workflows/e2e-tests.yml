@@ -25,7 +25,7 @@ jobs:
 
       - name: Wait for application to be ready
         run: |
-          npx wait-on http://localhost:3000 --timeout 60000 || npx wait-on https://isaaclins.com/SECRET/ --timeout 60000
+          npx wait-on https://isaaclins.com/SECRET/ --timeout 60000
 
       - name: Check application logs
         run: |
@@ -35,4 +35,4 @@ jobs:
       - name: Run Cypress tests
         run: npx cypress run
         env:
-          CYPRESS_baseUrl: http://localhost:3000
+          CYPRESS_baseUrl: https://isaaclins.com/SECRET/
