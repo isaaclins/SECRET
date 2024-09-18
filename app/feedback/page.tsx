@@ -50,7 +50,7 @@ export default function Feedback() {
             <BreadcrumbItem>
               <BreadcrumbLink
                 className="font-thin text-white"
-                href="/navigation"
+                href="/NAVIGATION"
               >
                 My Story
               </BreadcrumbLink>

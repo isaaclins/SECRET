@@ -16,7 +16,7 @@ export default function Home() {
     const encodedPassword = btoa(password); // Encode the password in base64
 
     if (encodedPassword === "VGhlIE15dGggb2YgU2lzeXBodXM=") {
-      router.push("/navigation");
+      router.push("/NAVIGATION");
     } else {
       setError(true);
       console.log("Password is incorrect!");
