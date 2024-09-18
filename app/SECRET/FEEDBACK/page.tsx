@@ -2,14 +2,8 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Slash } from "lucide-react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import CustomHeader from "@/components/custom/customHeader";
+import CustomScrollBar from "@/components/custom/customScrollBar";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function Feedback() {
@@ -44,28 +38,8 @@ export default function Feedback() {
 
   return (
     <div className="container mx-auto">
-      <header className="sticky top-10 mt-2 z-10 m-10 border p-5 backdrop-blur-sm">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink
-                className="font-thin text-white"
-                href="/NAVIGATION"
-              >
-                My Story
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator>
-              <Slash />
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink className="font-bold text-white" href="/feedback">
-                Feedback
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </header>
+      <CustomScrollBar></CustomScrollBar>
+      <CustomHeader main={true} parents={["SECRET"]} child="FEEDBACK" />
       <h1 className="flex text-4xl justify-center items-center">
         Thank you for your Feedback!
       </h1>

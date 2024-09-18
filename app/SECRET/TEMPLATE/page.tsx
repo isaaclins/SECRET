@@ -10,7 +10,7 @@ export default function Templatesite() {
         <CustomScrollBar></CustomScrollBar>
         <CustomHeader
           main={true}
-          parents={["SECRET", "NAVIGATION"]}
+          parents={["SECRET"]}
           child="TEMPLATE"
         />
         <div className="body">
