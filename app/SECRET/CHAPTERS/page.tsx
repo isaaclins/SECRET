@@ -26,6 +26,13 @@ export default function Chapterssite() {
             </p>
             <hr className="my-4" />
             <a href="CHAPTERS/">CHAPTERS:</a>
+            <ul className="list-disc list-inside">
+            <li><a href="/SECRET/CHAPTERS/1">1. What defines me?</a></li>
+            <li><a href="/SECRET/CHAPTERS/2">2. If you know me, you don&apos;t</a></li>
+            <li><a href="/SECRET/CHAPTERS/3">3. Untitled</a></li>
+            <li><a href="/SECRET/CHAPTERS/4">4. Untitled</a></li>
+            <li><a href="/SECRET/CHAPTERS/5">5. Untitled</a></li>
+          </ul>
           </div>
         </div>
       </div>
