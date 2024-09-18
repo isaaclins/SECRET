@@ -1,9 +1,9 @@
 "use client";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import "animate.css";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
   const [password, setPassword] = useState("");
