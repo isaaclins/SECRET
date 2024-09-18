@@ -18,7 +18,7 @@ const CustomFooter: React.FC<CustomFooterProps> = ({ Lastpage, Nextpage, Feedbac
                     </Button>
                 </a>
                 {Feedback && (
-                    <a href="/SECRET/FEEDBACK">
+                    <a href="/FEEDBACK">
                         <Button variant="outline">Leave Feedback</Button>
                     </a>
                 )}
