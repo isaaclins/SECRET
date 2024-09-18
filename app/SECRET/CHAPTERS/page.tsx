@@ -3,15 +3,15 @@ import CustomFooter from "@/components/custom/customFooter";
 import CustomHeader from "@/components/custom/customHeader";
 import CustomScrollBar from "@/components/custom/customScrollBar";
 
-export default function Navigationsite() {
+export default function Chapterssite() {
   return (
     <div className="container mx-auto">
       <CustomScrollBar></CustomScrollBar>
-      <CustomHeader main={true} parents={["SECRET"]} child="NAVIGATION" />
+      <CustomHeader main={true} parents={["SECRET"]} child="CHAPTERS" />
       <div className="body">
         <div className="mt-4">
           <h1 className="text-4xl flex justify-center items-start">
-            Navigation
+            Chapters
           </h1>
           <div className="mt-2 p-4 border rounded-md shadow-md">
             <p className="text-lg text-center"></p>
@@ -25,6 +25,7 @@ export default function Navigationsite() {
               the most unlikely of places.
             </p>
             <hr className="my-4" />
+            <a href="CHAPTERS/">CHAPTERS:</a>
           </div>
         </div>
       </div>
