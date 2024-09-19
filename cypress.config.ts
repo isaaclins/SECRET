@@ -9,6 +9,7 @@ export default defineConfig({
     },
     baseUrl: "http://localhost:3000",
     supportFile: false, // Diese Zeile hinzufügen
+    specPattern: "cypress/integration/**/*.tsx", // Stelle sicher, dass dies korrekt ist
   },
 
   component: {
