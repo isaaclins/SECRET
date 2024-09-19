@@ -25,7 +25,7 @@ export default function Chapterssite() {
               the most unlikely of places.
             </p>
             <hr className="my-4" />
-            <a href="CHAPTERS/">CHAPTERS:</a>
+            <a href="CHAPTERS">CHAPTERS:</a>
             <ul className="list-disc list-inside">
               <li><a href="CHAPTERS/1">1. What defines me?</a></li>
               <li><a href="CHAPTERS/2">2. If you know me, you don&apos;t</a></li>
