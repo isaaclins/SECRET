@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# SECRET
+
+## Overview
+
+This project is a web application built with Next.js and Tailwind CSS. It features a series of chapters that users can navigate through, as well as a feedback form that submits user feedback to a Discord channel.
+
+## Project Structure
+
+The project is organized into several main directories:
+
+- `app/`: Contains the main application code, including chapters and feedback pages.
+- `components/`: Contains reusable React components.
+- `cypress/`: Contains end-to-end tests for the application.
+- `lib/`: Contains utility functions and libraries.
+- `public/`: Contains static assets like images and fonts.
+- `styles/`: Contains global styles and Tailwind CSS configuration.
+
+## Key Features
+
+### Chapters
+
+The chapters are located in the `app/CHAPTERS/` directory. Each chapter is a separate page component:
+
+- [Chapter 1](app/CHAPTERS/1/page.tsx)
+- [Chapter 2](app/CHAPTERS/2/page.tsx)
+- [Chapter 3](app/CHAPTERS/3/page.tsx)
+- [Chapter 4](app/CHAPTERS/4/page.tsx)
+- [Chapter 5](app/CHAPTERS/5/page.tsx)
+
+Each chapter page imports custom components like `CustomFooter`, `CustomHeader`, and `CustomScrollBar`.
+
+### Feedback
+
+The feedback form is located in the [app/FEEDBACK/page.tsx](app/FEEDBACK/page.tsx) file. It allows users to submit feedback, which is then sent to a Discord channel using a webhook.
+
+### Cypress Tests
+
+End-to-end tests are written using Cypress and are located in the `cypress/integration/` directory. For example, the [chapters.page.test.tsx](cypress/integration/chapters.page.test.tsx) file contains tests for the chapter links.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/your-repo.git
+    cd your-repo
+    ```
+
+2. Install dependencies:
+    ```sh
+    npm install
+    # or
+    yarn install
+    ```
+
+### Running the Development Server
+
+To start the development server, run:
+```sh
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+OR you can start `start.bat`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build the project for production, run:
+```sh
+npm run build
+# or
+yarn build
+```
 
-## Learn More
+### Running Tests
 
-To learn more about Next.js, take a look at the following resources:
+To run Cypress tests, use:
+```sh
+npm run cypress
+# or
+yarn cypress
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project uses environment variables for configuration. Create a `.env.local` file in the root directory and add the following variables:
 
-## Deploy on Vercel
+```env
+WEBHOOKURL=your_base64_encoded_webhook_url
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Why Base64 Encoding?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I've decided to base64 encode the Discord webhook URL because Discord scans the web for their webhooks. By encoding the URL, we add a layer of obfuscation that helps prevent unauthorized access and misuse of the webhook.
+
+
+## License
+
+This project is licensed under the MIT License.
