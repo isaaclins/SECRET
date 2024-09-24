@@ -6,11 +6,11 @@
   "branchPrefix": "renovate/",
   "packageRules": [
     {
-      "automerge": false,
+      "automerge": true,
       "matchPackageNames": ["*"]
     }
   ],
-  "autoApprove": false,
+  "autoApprove": true,
   "prHourlyLimit": 0,
   "branchConcurrentLimit": 0,
   "reviewers": [
