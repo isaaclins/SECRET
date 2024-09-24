@@ -1,13 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+  "extends": [
+    "config:recommended"
+  ],
   "configMigration": true,
-  "schedule": ["every 1 hour on every weekday"],
+  "schedule": [
+    "every 1 hour every weekday"
+  ],
   "branchPrefix": "renovate/",
   "packageRules": [
     {
       "automerge": false,
-      "matchPackageNames": ["*"]
+      "matchPackageNames": [
+        "*"
+      ]
     }
   ],
   "autoApprove": false,
